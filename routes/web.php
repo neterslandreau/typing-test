@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('typing-test');
 });
+Route::get('/results', 'ResultsController@index');
+Route::post('/results', 'ResultsController@store');
