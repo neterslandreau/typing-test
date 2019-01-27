@@ -25,7 +25,7 @@
   </ul>
 </div>
 
-<button id="change">Edit Typing Text</button>
+<button id="change">Edit Test Text</button>
 <button id="reset">Reset</button>
 @endsection
 
