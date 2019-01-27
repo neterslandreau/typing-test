@@ -13,7 +13,8 @@
 
 
 <p>
-	<textarea id="output" cols="80" rows="10" style="width:100%"></textarea>
+	<textarea id="output" cols="80" rows="10" placeholder="Click here to start your test." onfocus="this.placeholder = ''"
+onblur="this.placeholder = 'Click here to start your test.'" style="width:100%"></textarea>
 </p>
 
 <div class="results" style="display:none;">

@@ -2,7 +2,7 @@
  * The typing test stuff
  */
 
-var start_text = 'The quick brown fox.';
+var start_text = 'The quick brown fox jumps over the lazy dog. The fox then laughs and laughs and laughs! Then the lazy dog bit the brown fox.';
 var index = 0;
 var started = false;
 
