@@ -2,6 +2,11 @@
  * The typing test stuff
  */
 
+var timer = 0;
+var wpm = 0;
+var errors = 0;
+var interval_timer;
+
 var start_text = 'The quick brown fox jumps over the lazy dog. The fox then laughs and laughs and laughs! Then the lazy dog bit the brown fox.';
 var index = 0;
 var started = false;
@@ -63,11 +68,6 @@ $(window).keypress(function(evt) {
 	}
 });
 
-var timer = 0;
-var wpm = 0;
-var errors = 0;
-var interval_timer;
-
 $("#reset").click(function(){
 	reset();
 });
@@ -84,7 +84,7 @@ $("#input_text").change(function(){
 	reset();
 });
 
-function start(){
+function start() {
 	interval_timer = setInterval(function() {
 		timer ++;
 		$("#timer").text(timer);
@@ -98,10 +98,7 @@ function stop(){
 	started = false;
 }
 
-function reset(){
-/*
-	$("#input_text").blur().hide();
-*/
+function reset() {
 	$("#your-attempt").text("");
 	index = 0;
 	errors = 0;
@@ -129,20 +126,3 @@ function finished(){
 		console.log(data);
 	});
 }
-
-var window_focus;
-
-$(window).focus(function() {
-	window_focus = true;
-}).blur(function() {
-	window_focus = false;
-});
-
-$(function() {
-	if(window_focus){
-		$("#focus").hide();
-	}
-	$(window).focus(function() {
-		$("#focus").hide();
-	});
-});

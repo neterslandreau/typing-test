@@ -27,6 +27,8 @@ onblur="this.placeholder = 'Click here to start your test.'" style="width:100%">
 </div>
 
 <button id="change">Edit Test Text</button>
+<button id="pause">Pause</button>
 <button id="reset">Reset</button>
+<button id="results">Results</button>
 @endsection
 
