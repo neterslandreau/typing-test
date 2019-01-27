@@ -16,3 +16,5 @@
 	</tr>
 	@endforeach
 </table>
+
+<a href="/">Back to the test</a>
