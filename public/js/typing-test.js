@@ -115,10 +115,11 @@ function reset(){
 	wpm = 0;
 	current_string = letters.substring(index, index + character_length);
 	$("#target").text(current_string);
+	$('#output').focus();
 }
 
 function finished(){
-	alert("Congratulations!\nWords per minute: " + wpm + "\nWordcount: " + wordcount + "\nErrors:" + errors+ "\ncsrf "+Laravel.csrfToken);
+	alert("Congratulations!\nWords per minute: " + wpm + "\nWordcount: " + wordcount + "\nErrors:" + errors);
 	$.post('results', {
 		_token: Laravel.csrfToken,
 		wpm: wpm,
